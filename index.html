@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ashu | AI & Python Developer</title>
 
     <style>
@@ -10,21 +11,27 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
+            font-family: Arial, sans-serif;
             background: #0f172a;
-            color: white;
+            color: #f8fafc;
             line-height: 1.6;
         }
 
+        /* NAVBAR */
         nav {
-            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #0f172a;
+            border-bottom: 1px solid #1e293b;
+            padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #111827;
         }
 
         nav h2 {
@@ -32,145 +39,366 @@
         }
 
         nav a {
-            color: white;
+            color: #cbd5e1;
             text-decoration: none;
-            margin-left: 20px;
+            margin-left: 25px;
+            transition: 0.3s;
         }
 
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 8%;
-        }
-
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
-
-        .hero span {
+        nav a:hover {
             color: #38bdf8;
         }
 
-        .hero p {
-            max-width: 650px;
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 8%;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero small {
+            color: #38bdf8;
+            font-size: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 80px);
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
             color: #cbd5e1;
-            font-size: 20px;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #94a3b8;
+            font-size: 19px;
+            max-width: 700px;
+        }
+
+        .buttons {
+            margin-top: 30px;
         }
 
         .btn {
             display: inline-block;
-            margin-top: 25px;
-            padding: 12px 25px;
+            padding: 13px 24px;
+            margin-right: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
             background: #38bdf8;
             color: #0f172a;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+            transition: 0.3s;
         }
 
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+        }
+
+        /* SECTIONS */
         section {
-            padding: 70px 8%;
+            padding: 90px 8%;
         }
 
         section h2 {
-            font-size: 35px;
-            margin-bottom: 25px;
+            font-size: 42px;
+            margin-bottom: 30px;
             color: #38bdf8;
         }
 
+        section p {
+            color: #cbd5e1;
+            max-width: 850px;
+        }
+
+        /* SKILLS */
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 14px;
         }
 
         .skill {
             background: #1e293b;
+            border: 1px solid #334155;
             padding: 12px 20px;
             border-radius: 8px;
+            color: #e2e8f0;
         }
 
+        /* SERVICES */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 28px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        /* PROJECT */
         .project {
             background: #1e293b;
-            padding: 30px;
-            border-radius: 12px;
-            max-width: 800px;
+            border: 1px solid #334155;
+            padding: 35px;
+            border-radius: 14px;
+            max-width: 900px;
         }
 
         .project h3 {
             color: #38bdf8;
-            margin-bottom: 10px;
+            font-size: 28px;
+            margin-bottom: 15px;
         }
 
+        .tech {
+            margin-top: 20px;
+            color: #94a3b8;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 700px;
+        }
+
+        .contact-box p {
+            margin-bottom: 12px;
+        }
+
+        .contact-box a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
         footer {
             text-align: center;
             padding: 30px;
-            background: #111827;
-            color: #94a3b8;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 80vh;
+                padding-top: 60px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
+            }
+
+            section {
+                padding: 65px 6%;
+            }
+
+            section h2 {
+                font-size: 34px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- NAVIGATION -->
     <nav>
-        <h2>ASHU</h2>
+        <h2>ASHU.DEV</h2>
 
         <div>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
+            <a href="#services">Services</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <div class="hero">
-        <h1>Hi, I'm <span>Ashu</span></h1>
 
-        <h2>AI & Python Developer</h2>
+    <!-- HERO -->
+    <section class="hero">
 
-        <p>
-            I build practical AI-powered applications, automation tools
-            and modern software solutions.
-        </p>
+        <div class="hero-content">
 
-        <a class="btn" href="#projects">View My Projects</a>
-    </div>
+            <small>AI • PYTHON • SOFTWARE DEVELOPMENT</small>
 
+            <h1>
+                Hi, I'm <span>Ashu</span>
+            </h1>
+
+            <h2>
+                AI & Python Developer
+            </h2>
+
+            <p>
+                I build practical AI-powered applications, automation tools
+                and software solutions that solve real-world problems.
+            </p>
+
+            <div class="buttons">
+
+                <a class="btn" href="#projects">
+                    View Projects
+                </a>
+
+                <a class="btn btn-outline"
+                   href="https://github.com/ashumohite1212"
+                   target="_blank">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
     <section id="about">
+
         <h2>About Me</h2>
 
         <p>
-            I am an AIML student interested in Artificial Intelligence,
-            Python development, web development and real-world software
-            solutions. I enjoy building projects that solve practical problems.
+            I'm an AIML student and aspiring software developer interested
+            in Artificial Intelligence, Python development, automation and
+            modern web technologies.
         </p>
+
+        <br>
+
+        <p>
+            My goal is to create useful software that solves practical
+            problems instead of building only demonstration projects.
+        </p>
+
     </section>
 
+
+    <!-- SKILLS -->
     <section id="skills">
-        <h2>My Skills</h2>
+
+        <h2>Technical Skills</h2>
 
         <div class="skills">
+
             <div class="skill">Python</div>
             <div class="skill">Artificial Intelligence</div>
             <div class="skill">Machine Learning</div>
             <div class="skill">FastAPI</div>
             <div class="skill">Flask</div>
-            <div class="skill">HTML & CSS</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
             <div class="skill">JavaScript</div>
-            <div class="skill">Git & GitHub</div>
+            <div class="skill">Git</div>
+            <div class="skill">GitHub</div>
             <div class="skill">Pandas</div>
             <div class="skill">SQL</div>
+
         </div>
+
     </section>
 
+
+    <!-- SERVICES -->
+    <section id="services">
+
+        <h2>Services</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Python Development</h3>
+                <p>
+                    Python scripts, applications and automation solutions
+                    for practical tasks.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>AI Solutions</h3>
+                <p>
+                    AI-powered applications and intelligent features
+                    for software projects.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>API Development</h3>
+                <p>
+                    Backend APIs using Python, FastAPI and Flask.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Automation</h3>
+                <p>
+                    Automating repetitive tasks using Python and software
+                    tools.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
     <section id="projects">
-        <h2>My Projects</h2>
+
+        <h2>Featured Project</h2>
 
         <div class="project">
+
             <h3>CODEX</h3>
 
             <p>
@@ -179,8 +407,9 @@
                 understand and maintain unfamiliar software projects.
             </p>
 
-            <p>
-                Technologies: Python, AI, AST, Git, Pytest and JSON.
+            <p class="tech">
+                <strong>Technologies:</strong>
+                Python, AI, AST, Git, Pytest, JSON
             </p>
 
             <br>
@@ -188,28 +417,56 @@
             <a class="btn"
                href="https://github.com/ashumohite1212"
                target="_blank">
-                View GitHub
+                View on GitHub
             </a>
+
         </div>
+
     </section>
 
+
+    <!-- CONTACT -->
     <section id="contact">
-        <h2>Contact Me</h2>
 
-        <p>Email: Add your email here</p>
+        <h2>Let's Work Together</h2>
 
-        <p>
-            GitHub:
-            <a href="https://github.com/ashumohite1212"
-               target="_blank"
-               style="color:#38bdf8;">
-                github.com/ashumohite1212
+        <div class="contact-box">
+
+            <p>
+                Interested in working together or have a project idea?
+                Feel free to contact me.
+            </p>
+
+            <p>
+                📧 Email:
+                <strong>Add your email here</strong>
+            </p>
+
+            <p>
+                🔗 GitHub:
+                <a href="https://github.com/ashumohite1212"
+                   target="_blank">
+                    github.com/ashumohite1212
+                </a>
+            </p>
+
+            <br>
+
+            <a class="btn"
+               href="mailto:YOUR_EMAIL@gmail.com">
+                Contact Me
             </a>
-        </p>
+
+        </div>
+
     </section>
 
+
+    <!-- FOOTER -->
     <footer>
+
         © 2026 Ashu | AI & Python Developer
+
     </footer>
 
 </body>

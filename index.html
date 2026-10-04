@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Ashu - AI & Python Developer building practical AI, automation and software solutions.">
 
     <title>Ashu | AI & Python Developer</title>
 
+
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family: Arial, sans-serif;
@@ -21,59 +30,91 @@
             line-height: 1.6;
         }
 
-        /* NAVBAR */
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: #0f172a;
-            border-bottom: 1px solid #1e293b;
-            padding: 18px 8%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            padding: 18px 8%;
+
+            background: rgba(15, 23, 42, 0.95);
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid #1e293b;
         }
+
 
         nav h2 {
             color: #38bdf8;
+            font-size: 24px;
         }
+
+
+        nav .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
 
         nav a {
             color: #cbd5e1;
-            text-decoration: none;
-            margin-left: 25px;
             transition: 0.3s;
         }
+
 
         nav a:hover {
             color: #38bdf8;
         }
 
-        /* HERO */
+
+        /* ================= HERO ================= */
+
         .hero {
             min-height: 90vh;
+
             display: flex;
             align-items: center;
+
             padding: 80px 8%;
         }
 
+
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
         }
+
 
         .hero small {
             color: #38bdf8;
-            font-size: 18px;
+            font-size: 15px;
+            letter-spacing: 3px;
         }
+
 
         .hero h1 {
             font-size: clamp(45px, 8vw, 80px);
             margin: 15px 0;
         }
 
+
         .hero h1 span {
             color: #38bdf8;
         }
+
 
         .hero h2 {
             color: #cbd5e1;
@@ -81,31 +122,50 @@
             margin-bottom: 20px;
         }
 
+
         .hero p {
             color: #94a3b8;
             font-size: 19px;
-            max-width: 700px;
+            max-width: 720px;
         }
+
+
+        .hero-description {
+            margin-top: 10px;
+        }
+
+
+        /* ================= BUTTONS ================= */
 
         .buttons {
             margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
         }
+
 
         .btn {
             display: inline-block;
+
             padding: 13px 24px;
-            margin-right: 12px;
+
             border-radius: 8px;
-            text-decoration: none;
+
             font-weight: bold;
+
             background: #38bdf8;
+
             color: #0f172a;
+
             transition: 0.3s;
         }
+
 
         .btn:hover {
             transform: translateY(-3px);
         }
+
 
         .btn-outline {
             background: transparent;
@@ -113,10 +173,19 @@
             border: 1px solid #38bdf8;
         }
 
-        /* SECTIONS */
+
+        .btn-outline:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+
+        /* ================= GENERAL SECTIONS ================= */
+
         section {
             padding: 90px 8%;
         }
+
 
         section h2 {
             font-size: 42px;
@@ -124,98 +193,255 @@
             color: #38bdf8;
         }
 
+
         section p {
             color: #cbd5e1;
             max-width: 850px;
         }
 
-        /* SKILLS */
+
+        /* ================= ABOUT ================= */
+
+        .about-content {
+            max-width: 850px;
+        }
+
+
+        .about-content p {
+            margin-bottom: 18px;
+            font-size: 17px;
+        }
+
+
+        /* ================= SKILLS ================= */
+
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
         }
 
+
         .skill {
             background: #1e293b;
+
             border: 1px solid #334155;
+
             padding: 12px 20px;
+
             border-radius: 8px;
+
             color: #e2e8f0;
-        }
 
-        /* SERVICES */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #1e293b;
-            border: 1px solid #334155;
-            padding: 28px;
-            border-radius: 12px;
             transition: 0.3s;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
+
+        .skill:hover {
+            transform: translateY(-4px);
             border-color: #38bdf8;
         }
+
+
+        /* ================= SERVICES ================= */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+            repeat(auto-fit, minmax(230px, 1fr));
+
+            gap: 20px;
+        }
+
+
+        .card {
+            background: #1e293b;
+
+            border: 1px solid #334155;
+
+            padding: 28px;
+
+            border-radius: 12px;
+
+            transition: 0.3s;
+        }
+
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #38bdf8;
+        }
+
 
         .card h3 {
             color: #38bdf8;
             margin-bottom: 12px;
         }
 
-        /* PROJECT */
-        .project {
-            background: #1e293b;
-            border: 1px solid #334155;
-            padding: 35px;
-            border-radius: 14px;
-            max-width: 900px;
-        }
 
-        .project h3 {
-            color: #38bdf8;
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        .tech {
-            margin-top: 20px;
+        .card p {
             color: #94a3b8;
         }
 
-        /* CONTACT */
+
+        /* ================= PROJECT ================= */
+
+        .project {
+            max-width: 1000px;
+
+            background: #1e293b;
+
+            border: 1px solid #334155;
+
+            padding: 40px;
+
+            border-radius: 18px;
+
+            transition: 0.3s;
+        }
+
+
+        .project:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+
+        .project-label {
+            color: #38bdf8;
+
+            font-size: 13px;
+
+            letter-spacing: 2px;
+
+            font-weight: bold;
+        }
+
+
+        .project h3 {
+            color: #38bdf8;
+
+            font-size: 46px;
+
+            margin-top: 8px;
+        }
+
+
+        .project h4 {
+            color: #e2e8f0;
+
+            font-size: 21px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .project p {
+            color: #cbd5e1;
+
+            margin-bottom: 20px;
+        }
+
+
+        .project h5 {
+            color: #f8fafc;
+
+            font-size: 18px;
+
+            margin-top: 25px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .project ul {
+            padding-left: 22px;
+
+            color: #cbd5e1;
+        }
+
+
+        .project li {
+            margin: 8px 0;
+        }
+
+
+        /* TECHNOLOGIES */
+
+        .tech-stack {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 15px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .tech {
+            background: #0f172a;
+
+            border: 1px solid #334155;
+
+            padding: 8px 14px;
+
+            border-radius: 20px;
+
+            color: #cbd5e1;
+
+            font-size: 13px;
+        }
+
+
+        /* ================= CONTACT ================= */
+
         .contact-box {
             background: #1e293b;
+
             border: 1px solid #334155;
-            padding: 30px;
-            border-radius: 12px;
-            max-width: 700px;
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            max-width: 750px;
         }
+
 
         .contact-box p {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
-        .contact-box a {
+
+        .contact-links {
+            margin-top: 20px;
+        }
+
+
+        .contact-links a {
             color: #38bdf8;
-            text-decoration: none;
         }
 
-        /* FOOTER */
+
+        /* ================= FOOTER ================= */
+
         footer {
             text-align: center;
+
             padding: 30px;
+
             border-top: 1px solid #1e293b;
+
             color: #64748b;
         }
 
-        /* MOBILE */
+
+        /* ================= MOBILE ================= */
+
         @media (max-width: 700px) {
 
             nav {
@@ -223,66 +449,117 @@
                 gap: 15px;
             }
 
+
+            nav .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+
             nav a {
-                margin: 0 7px;
                 font-size: 14px;
             }
+
 
             .hero {
                 min-height: 80vh;
                 padding-top: 60px;
             }
 
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+
             .hero h2 {
                 font-size: 23px;
             }
+
 
             section {
                 padding: 65px 6%;
             }
 
+
             section h2 {
                 font-size: 34px;
             }
+
+
+            .project {
+                padding: 25px;
+            }
+
+
+            .project h3 {
+                font-size: 38px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- NAVIGATION -->
+
+    <!-- ================= NAVIGATION ================= -->
+
     <nav>
+
         <h2>ASHU.DEV</h2>
 
-        <div>
+        <div class="nav-links">
+
             <a href="#about">About</a>
+
             <a href="#skills">Skills</a>
+
             <a href="#services">Services</a>
+
             <a href="#projects">Projects</a>
+
             <a href="#contact">Contact</a>
+
         </div>
+
     </nav>
 
 
-    <!-- HERO -->
+
+    <!-- ================= HERO ================= -->
+
     <section class="hero">
 
         <div class="hero-content">
 
-            <small>AI • PYTHON • SOFTWARE DEVELOPMENT</small>
+            <small>
+                AI • PYTHON • SOFTWARE DEVELOPMENT
+            </small>
+
 
             <h1>
                 Hi, I'm <span>Ashu</span>
             </h1>
 
+
             <h2>
                 AI & Python Developer
             </h2>
 
-            <p>
-                I build practical AI-powered applications, automation tools
-                and software solutions that solve real-world problems.
+
+            <p class="hero-description">
+
+                I build practical AI-powered applications,
+                automation tools and software solutions
+                designed to solve real-world problems.
+
             </p>
+
 
             <div class="buttons">
 
@@ -290,12 +567,19 @@
                     View Projects
                 </a>
 
+
                 <a class="btn btn-outline"
                    href="https://github.com/ashumohite1212"
                    target="_blank">
                     GitHub
                 </a>
-                https://www.linkedin.com/in/ashish-mohite-695aa13a1
+
+
+                <a class="btn btn-outline"
+                   href="https://www.linkedin.com/in/ashish-mohite-695aa13a1"
+                   target="_blank">
+                    LinkedIn
+                </a>
 
             </div>
 
@@ -304,171 +588,442 @@
     </section>
 
 
-    <!-- ABOUT -->
+
+    <!-- ================= ABOUT ================= -->
+
     <section id="about">
 
         <h2>About Me</h2>
 
-        <p>
-            I'm an AIML student and aspiring software developer interested
-            in Artificial Intelligence, Python development, automation and
-            modern web technologies.
-        </p>
 
-        <br>
+        <div class="about-content">
 
-        <p>
-            My goal is to create useful software that solves practical
-            problems instead of building only demonstration projects.
-        </p>
+            <p>
+
+                I'm an AIML student and aspiring software developer
+                interested in Artificial Intelligence, Python,
+                backend development, automation and modern
+                software technologies.
+
+            </p>
+
+
+            <p>
+
+                I enjoy building practical projects that solve
+                real problems instead of creating only demonstration
+                applications.
+
+            </p>
+
+
+            <p>
+
+                My current focus is on developing AI-powered
+                software and continuously improving my programming
+                and problem-solving skills.
+
+            </p>
+
+        </div>
 
     </section>
 
 
-    <!-- SKILLS -->
+
+    <!-- ================= SKILLS ================= -->
+
     <section id="skills">
 
         <h2>Technical Skills</h2>
 
+
         <div class="skills">
 
             <div class="skill">Python</div>
+
             <div class="skill">Artificial Intelligence</div>
+
             <div class="skill">Machine Learning</div>
+
             <div class="skill">FastAPI</div>
+
             <div class="skill">Flask</div>
+
             <div class="skill">HTML</div>
+
             <div class="skill">CSS</div>
+
             <div class="skill">JavaScript</div>
+
             <div class="skill">Git</div>
+
             <div class="skill">GitHub</div>
+
             <div class="skill">Pandas</div>
+
             <div class="skill">SQL</div>
+
+            <div class="skill">Python AST</div>
+
+            <div class="skill">Pytest</div>
+
+            <div class="skill">JSON</div>
 
         </div>
 
     </section>
 
 
-    <!-- SERVICES -->
+
+    <!-- ================= SERVICES ================= -->
+
     <section id="services">
 
         <h2>Services</h2>
 
+
         <div class="cards">
 
-            <div class="card">
-                <h3>Python Development</h3>
-                <p>
-                    Python scripts, applications and automation solutions
-                    for practical tasks.
-                </p>
-            </div>
 
             <div class="card">
-                <h3>AI Solutions</h3>
+
+                <h3>
+                    Python Development
+                </h3>
+
                 <p>
-                    AI-powered applications and intelligent features
-                    for software projects.
+
+                    Python scripts, applications,
+                    backend logic and practical
+                    development solutions.
+
                 </p>
+
             </div>
 
-            <div class="card">
-                <h3>API Development</h3>
-                <p>
-                    Backend APIs using Python, FastAPI and Flask.
-                </p>
-            </div>
+
 
             <div class="card">
-                <h3>Automation</h3>
+
+                <h3>
+                    AI / ML Solutions
+                </h3>
+
                 <p>
-                    Automating repetitive tasks using Python and software
-                    tools.
+
+                    AI-powered applications and
+                    intelligent features for
+                    software projects.
+
                 </p>
+
             </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Backend & APIs
+                </h3>
+
+                <p>
+
+                    Backend applications and APIs
+                    using Python, FastAPI and Flask.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>
+                    Python Automation
+                </h3>
+
+                <p>
+
+                    Automating repetitive tasks
+                    and data-processing workflows
+                    using Python.
+
+                </p>
+
+            </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- PROJECTS -->
+
+    <!-- ================= PROJECTS ================= -->
+
     <section id="projects">
 
         <h2>Featured Project</h2>
 
+
         <div class="project">
 
-            <h3>CODEX</h3>
+
+            <span class="project-label">
+
+                AI • SOFTWARE DEVELOPMENT
+
+            </span>
+
+
+            <h3>
+                CODEX
+            </h3>
+
+
+            <h4>
+
+                AI-Powered Codebase Understanding
+                and Maintenance Assistant
+
+            </h4>
+
 
             <p>
-                CODEX is an AI-Powered Codebase Understanding and
-                Maintenance Assistant designed to help developers
-                understand and maintain unfamiliar software projects.
+
+                CODEX is designed to help developers
+                understand and maintain unfamiliar
+                software projects during development
+                and project handover.
+
             </p>
 
-            <p class="tech">
-                <strong>Technologies:</strong>
-                Python, AI, AST, Git, Pytest, JSON
+
+
+            <h5>
+                The Problem
+            </h5>
+
+
+            <p>
+
+                When a developer takes over an existing
+                software project, understanding the
+                codebase, module relationships, recent
+                changes and test status can require
+                significant time.
+
             </p>
 
-            <br>
 
-            <a class="btn"
-               href="https://github.com/ashumohite1212"
-               target="_blank">
-                View on GitHub
-            </a>
+
+            <h5>
+                How CODEX Helps
+            </h5>
+
+
+            <p>
+
+                CODEX collects project evidence and
+                analyzes it to provide developers with
+                a clearer understanding of the existing
+                software project.
+
+            </p>
+
+
+
+            <h5>
+                Key Features
+            </h5>
+
+
+            <ul>
+
+                <li>
+                    Project structure analysis
+                </li>
+
+                <li>
+                    Python AST-based module and import analysis
+                </li>
+
+                <li>
+                    Git-based source-code change tracking
+                </li>
+
+                <li>
+                    Pytest test-result analysis
+                </li>
+
+                <li>
+                    Test-result baseline and comparison
+                </li>
+
+                <li>
+                    Structured JSON project reports
+                </li>
+
+                <li>
+                    AI-assisted codebase understanding
+                </li>
+
+                <li>
+                    Local/private processing approach
+                </li>
+
+            </ul>
+
+
+
+            <h5>
+                Technology Stack
+            </h5>
+
+
+            <div class="tech-stack">
+
+                <span class="tech">
+                    Python
+                </span>
+
+                <span class="tech">
+                    AI / ML
+                </span>
+
+                <span class="tech">
+                    Python AST
+                </span>
+
+                <span class="tech">
+                    Git
+                </span>
+
+                <span class="tech">
+                    Pytest
+                </span>
+
+                <span class="tech">
+                    JSON
+                </span>
+
+            </div>
+
+
+
+            <div class="buttons">
+
+                <a class="btn"
+                   href="https://github.com/ashumohite1212"
+                   target="_blank">
+
+                    View on GitHub
+
+                </a>
+
+
+                <a class="btn btn-outline"
+                   href="#contact">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- CONTACT -->
+
+    <!-- ================= CONTACT ================= -->
+
     <section id="contact">
 
-        <h2>Let's Work Together</h2>
+        <h2>
+            Let's Connect
+        </h2>
+
 
         <div class="contact-box">
 
-            <p>
-                Interested in working together or have a project idea?
-                Feel free to contact me.
-            </p>
 
             <p>
-                📧 Email:
-                <strong>ashumohite2107@gmail.com</strong>
+
+                Interested in AI, Python development,
+                automation or software projects?
+
+                Feel free to connect with me.
+
             </p>
 
-            <p>
-                🔗 GitHub:
-                <a href="https://github.com/ashumohite1212"
-                   target="_blank">
-                    github.com/ashumohite1212
+
+            <div class="contact-links">
+
+                <p>
+
+                    GitHub:
+
+                    <a href="https://github.com/ashumohite1212"
+                       target="_blank">
+
+                        github.com/ashumohite1212
+
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    LinkedIn:
+
+                    <a href="https://www.linkedin.com/in/ashish-mohite-695aa13a1"
+                       target="_blank">
+
+                        LinkedIn Profile
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
+            <!-- Replace YOUR_EMAIL with your email inside GitHub -->
+
+            <div class="buttons">
+
+                <a class="btn"
+                   href="mailto:YOUR_EMAIL@example.com">
+
+                    Email Me
+
                 </a>
-            </p>
 
-            <br>
+            </div>
 
-            <a class="btn"
-               href="mailto:ashumohite2107@gmail.com">
-                Contact Me
-            </a>
 
         </div>
 
     </section>
 
 
-    <!-- FOOTER -->
+
+    <!-- ================= FOOTER ================= -->
+
     <footer>
 
         © 2026 Ashu | AI & Python Developer
 
     </footer>
 
+
 </body>
+
 </html>

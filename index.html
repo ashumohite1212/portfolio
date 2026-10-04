@@ -2,26 +2,24 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Ashu - AI & Python Developer building practical AI, automation and software solutions.">
+        content="Ashu - AI & Python Developer building practical AI applications, automation tools and software solutions.">
+
+    <meta name="keywords"
+        content="Ashu, Python Developer, AI Developer, Machine Learning, FastAPI, Flask, Freelancing">
 
     <title>Ashu | AI & Python Developer</title>
 
-
     <style>
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
-
 
         body {
             font-family: Arial, sans-serif;
@@ -30,14 +28,12 @@
             line-height: 1.6;
         }
 
-
         a {
             text-decoration: none;
             color: inherit;
         }
 
-
-        /* ================= NAVBAR ================= */
+        /* NAVBAR */
 
         nav {
             position: sticky;
@@ -51,37 +47,31 @@
             padding: 18px 8%;
 
             background: rgba(15, 23, 42, 0.95);
-
             backdrop-filter: blur(10px);
 
             border-bottom: 1px solid #1e293b;
         }
-
 
         nav h2 {
             color: #38bdf8;
             font-size: 24px;
         }
 
-
-        nav .nav-links {
+        .nav-links {
             display: flex;
             gap: 25px;
         }
 
-
-        nav a {
+        .nav-links a {
             color: #cbd5e1;
             transition: 0.3s;
         }
 
-
-        nav a:hover {
+        .nav-links a:hover {
             color: #38bdf8;
         }
 
-
-        /* ================= HERO ================= */
+        /* HERO */
 
         .hero {
             min-height: 90vh;
@@ -90,13 +80,16 @@
             align-items: center;
 
             padding: 80px 8%;
-        }
 
+            background:
+                radial-gradient(circle at 80% 30%,
+                    rgba(56, 189, 248, 0.10),
+                    transparent 35%);
+        }
 
         .hero-content {
             max-width: 900px;
         }
-
 
         .hero small {
             color: #38bdf8;
@@ -104,17 +97,14 @@
             letter-spacing: 3px;
         }
 
-
         .hero h1 {
             font-size: clamp(45px, 8vw, 80px);
             margin: 15px 0;
         }
 
-
         .hero h1 span {
             color: #38bdf8;
         }
-
 
         .hero h2 {
             color: #cbd5e1;
@@ -122,28 +112,22 @@
             margin-bottom: 20px;
         }
 
-
         .hero p {
             color: #94a3b8;
             font-size: 19px;
             max-width: 720px;
         }
 
-
-        .hero-description {
-            margin-top: 10px;
-        }
-
-
-        /* ================= BUTTONS ================= */
+        /* BUTTONS */
 
         .buttons {
             margin-top: 30px;
+
             display: flex;
             flex-wrap: wrap;
+
             gap: 12px;
         }
-
 
         .btn {
             display: inline-block;
@@ -155,37 +139,33 @@
             font-weight: bold;
 
             background: #38bdf8;
-
             color: #0f172a;
 
             transition: 0.3s;
         }
 
-
         .btn:hover {
             transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.20);
         }
-
 
         .btn-outline {
             background: transparent;
             color: #38bdf8;
+
             border: 1px solid #38bdf8;
         }
-
 
         .btn-outline:hover {
             background: #38bdf8;
             color: #0f172a;
         }
 
-
-        /* ================= GENERAL SECTIONS ================= */
+        /* GENERAL */
 
         section {
             padding: 90px 8%;
         }
-
 
         section h2 {
             font-size: 42px;
@@ -193,34 +173,29 @@
             color: #38bdf8;
         }
 
-
         section p {
             color: #cbd5e1;
             max-width: 850px;
         }
 
-
-        /* ================= ABOUT ================= */
+        /* ABOUT */
 
         .about-content {
             max-width: 850px;
         }
-
 
         .about-content p {
             margin-bottom: 18px;
             font-size: 17px;
         }
 
-
-        /* ================= SKILLS ================= */
+        /* SKILLS */
 
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
         }
-
 
         .skill {
             background: #1e293b;
@@ -236,24 +211,21 @@
             transition: 0.3s;
         }
 
-
         .skill:hover {
             transform: translateY(-4px);
             border-color: #38bdf8;
         }
 
-
-        /* ================= SERVICES ================= */
+        /* SERVICES */
 
         .cards {
             display: grid;
 
             grid-template-columns:
-            repeat(auto-fit, minmax(230px, 1fr));
+                repeat(auto-fit, minmax(230px, 1fr));
 
             gap: 20px;
         }
-
 
         .card {
             background: #1e293b;
@@ -267,25 +239,21 @@
             transition: 0.3s;
         }
 
-
         .card:hover {
             transform: translateY(-6px);
             border-color: #38bdf8;
         }
-
 
         .card h3 {
             color: #38bdf8;
             margin-bottom: 12px;
         }
 
-
         .card p {
             color: #94a3b8;
         }
 
-
-        /* ================= PROJECT ================= */
+        /* PROJECT */
 
         .project {
             max-width: 1000px;
@@ -301,12 +269,10 @@
             transition: 0.3s;
         }
 
-
         .project:hover {
             transform: translateY(-5px);
             border-color: #38bdf8;
         }
-
 
         .project-label {
             color: #38bdf8;
@@ -318,7 +284,6 @@
             font-weight: bold;
         }
 
-
         .project h3 {
             color: #38bdf8;
 
@@ -326,7 +291,6 @@
 
             margin-top: 8px;
         }
-
 
         .project h4 {
             color: #e2e8f0;
@@ -336,13 +300,11 @@
             margin-bottom: 25px;
         }
 
-
         .project p {
             color: #cbd5e1;
 
             margin-bottom: 20px;
         }
-
 
         .project h5 {
             color: #f8fafc;
@@ -350,10 +312,8 @@
             font-size: 18px;
 
             margin-top: 25px;
-
             margin-bottom: 10px;
         }
-
 
         .project ul {
             padding-left: 22px;
@@ -361,13 +321,11 @@
             color: #cbd5e1;
         }
 
-
         .project li {
             margin: 8px 0;
         }
 
-
-        /* TECHNOLOGIES */
+        /* TECHNOLOGY */
 
         .tech-stack {
             display: flex;
@@ -380,7 +338,6 @@
 
             margin-bottom: 25px;
         }
-
 
         .tech {
             background: #0f172a;
@@ -396,8 +353,7 @@
             font-size: 13px;
         }
 
-
-        /* ================= CONTACT ================= */
+        /* CONTACT */
 
         .contact-box {
             background: #1e293b;
@@ -411,23 +367,19 @@
             max-width: 750px;
         }
 
-
         .contact-box p {
             margin-bottom: 15px;
         }
-
 
         .contact-links {
             margin-top: 20px;
         }
 
-
         .contact-links a {
             color: #38bdf8;
         }
 
-
-        /* ================= FOOTER ================= */
+        /* FOOTER */
 
         footer {
             text-align: center;
@@ -439,8 +391,7 @@
             color: #64748b;
         }
 
-
-        /* ================= MOBILE ================= */
+        /* MOBILE */
 
         @media (max-width: 700px) {
 
@@ -449,65 +400,59 @@
                 gap: 15px;
             }
 
-
-            nav .nav-links {
+            .nav-links {
                 gap: 12px;
+
                 flex-wrap: wrap;
+
                 justify-content: center;
             }
 
-
-            nav a {
+            .nav-links a {
                 font-size: 14px;
             }
-
 
             .hero {
                 min-height: 80vh;
                 padding-top: 60px;
             }
 
-
             .hero h1 {
                 font-size: 50px;
             }
-
 
             .hero h2 {
                 font-size: 23px;
             }
 
-
             section {
                 padding: 65px 6%;
             }
-
 
             section h2 {
                 font-size: 34px;
             }
 
-
             .project {
                 padding: 25px;
             }
-
 
             .project h3 {
                 font-size: 38px;
             }
 
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
         }
-
     </style>
-
 </head>
 
 
 <body>
 
-
-    <!-- ================= NAVIGATION ================= -->
+    <!-- NAVIGATION -->
 
     <nav>
 
@@ -530,8 +475,7 @@
     </nav>
 
 
-
-    <!-- ================= HERO ================= -->
+    <!-- HERO -->
 
     <section class="hero">
 
@@ -541,25 +485,19 @@
                 AI • PYTHON • SOFTWARE DEVELOPMENT
             </small>
 
-
             <h1>
                 Hi, I'm <span>Ashu</span>
             </h1>
-
 
             <h2>
                 AI & Python Developer
             </h2>
 
-
-            <p class="hero-description">
-
+            <p>
                 I build practical AI-powered applications,
                 automation tools and software solutions
                 designed to solve real-world problems.
-
             </p>
-
 
             <div class="buttons">
 
@@ -567,17 +505,15 @@
                     View Projects
                 </a>
 
-
                 <a class="btn btn-outline"
-                   href="https://github.com/ashumohite1212"
-                   target="_blank">
+                    href="https://github.com/ashumohite1212"
+                    target="_blank">
                     GitHub
                 </a>
 
-
                 <a class="btn btn-outline"
-                   href="https://www.linkedin.com/in/ashish-mohite-695aa13a1"
-                   target="_blank">
+                    href="https://www.linkedin.com/in/ashish-mohite-695aa13a1"
+                    target="_blank">
                     LinkedIn
                 </a>
 
@@ -588,41 +524,31 @@
     </section>
 
 
-
-    <!-- ================= ABOUT ================= -->
+    <!-- ABOUT -->
 
     <section id="about">
 
         <h2>About Me</h2>
 
-
         <div class="about-content">
 
             <p>
-
                 I'm an AIML student and aspiring software developer
                 interested in Artificial Intelligence, Python,
                 backend development, automation and modern
                 software technologies.
-
             </p>
 
-
             <p>
-
                 I enjoy building practical projects that solve
-                real problems instead of creating only demonstration
-                applications.
-
+                real problems instead of creating only
+                demonstration applications.
             </p>
 
-
             <p>
-
                 My current focus is on developing AI-powered
-                software and continuously improving my programming
-                and problem-solving skills.
-
+                software and continuously improving my
+                programming and problem-solving skills.
             </p>
 
         </div>
@@ -630,13 +556,11 @@
     </section>
 
 
-
-    <!-- ================= SKILLS ================= -->
+    <!-- SKILLS -->
 
     <section id="skills">
 
         <h2>Technical Skills</h2>
-
 
         <div class="skills">
 
@@ -675,16 +599,13 @@
     </section>
 
 
-
-    <!-- ================= SERVICES ================= -->
+    <!-- SERVICES -->
 
     <section id="services">
 
         <h2>Services</h2>
 
-
         <div class="cards">
-
 
             <div class="card">
 
@@ -693,33 +614,27 @@
                 </h3>
 
                 <p>
-
-                    Python scripts, applications,
-                    backend logic and practical
-                    development solutions.
-
+                    Custom Python scripts, applications,
+                    data processing and practical software
+                    solutions for real-world tasks.
                 </p>
 
             </div>
-
 
 
             <div class="card">
 
                 <h3>
-                    AI / ML Solutions
+                    AI & ML Solutions
                 </h3>
 
                 <p>
-
-                    AI-powered applications and
-                    intelligent features for
-                    software projects.
-
+                    AI-powered applications, intelligent
+                    features and machine-learning based
+                    solutions for software projects.
                 </p>
 
             </div>
-
 
 
             <div class="card">
@@ -729,117 +644,103 @@
                 </h3>
 
                 <p>
-
-                    Backend applications and APIs
-                    using Python, FastAPI and Flask.
-
+                    FastAPI and Flask based backend
+                    development, REST APIs and
+                    server-side applications.
                 </p>
 
             </div>
-
 
 
             <div class="card">
 
                 <h3>
-                    Python Automation
+                    Automation & Maintenance
                 </h3>
 
                 <p>
-
-                    Automating repetitive tasks
-                    and data-processing workflows
-                    using Python.
-
+                    Python automation, debugging,
+                    data-processing workflows and
+                    maintenance of existing applications.
                 </p>
 
             </div>
 
+        </div>
+
+
+        <div class="buttons">
+
+            <a class="btn" href="#contact">
+                Work With Me
+            </a>
+
+            <a class="btn btn-outline" href="#projects">
+                See My Work
+            </a>
 
         </div>
 
     </section>
 
 
-
-    <!-- ================= PROJECTS ================= -->
+    <!-- PROJECT -->
 
     <section id="projects">
 
         <h2>Featured Project</h2>
 
-
         <div class="project">
 
-
             <span class="project-label">
-
                 AI • SOFTWARE DEVELOPMENT
-
             </span>
-
 
             <h3>
                 CODEX
             </h3>
 
-
             <h4>
-
                 AI-Powered Codebase Understanding
                 and Maintenance Assistant
-
             </h4>
 
-
             <p>
-
                 CODEX is designed to help developers
                 understand and maintain unfamiliar
                 software projects during development
                 and project handover.
-
             </p>
-
 
 
             <h5>
                 The Problem
             </h5>
 
-
             <p>
-
                 When a developer takes over an existing
                 software project, understanding the
                 codebase, module relationships, recent
                 changes and test status can require
                 significant time.
-
             </p>
-
 
 
             <h5>
                 How CODEX Helps
             </h5>
 
-
             <p>
-
                 CODEX collects project evidence and
                 analyzes it to provide developers with
                 a clearer understanding of the existing
                 software project.
-
             </p>
-
 
 
             <h5>
                 Key Features
             </h5>
-
 
             <ul>
 
@@ -878,11 +779,9 @@
             </ul>
 
 
-
             <h5>
                 Technology Stack
             </h5>
-
 
             <div class="tech-stack">
 
@@ -913,20 +812,18 @@
             </div>
 
 
-
             <div class="buttons">
 
                 <a class="btn"
-                   href="https://github.com/ashumohite1212"
-                   target="_blank">
+                    href="https://github.com/ashumohite1212"
+                    target="_blank">
 
                     View on GitHub
 
                 </a>
 
-
                 <a class="btn btn-outline"
-                   href="#contact">
+                    href="#contact">
 
                     Contact Me
 
@@ -934,14 +831,12 @@
 
             </div>
 
-
         </div>
 
     </section>
 
 
-
-    <!-- ================= CONTACT ================= -->
+    <!-- CONTACT -->
 
     <section id="contact">
 
@@ -949,28 +844,22 @@
             Let's Connect
         </h2>
 
-
         <div class="contact-box">
 
-
             <p>
-
                 Interested in AI, Python development,
                 automation or software projects?
-
                 Feel free to connect with me.
-
             </p>
-
 
             <div class="contact-links">
 
                 <p>
 
-                    GitHub:
+                    <strong>GitHub:</strong>
 
                     <a href="https://github.com/ashumohite1212"
-                       target="_blank">
+                        target="_blank">
 
                         github.com/ashumohite1212
 
@@ -981,10 +870,10 @@
 
                 <p>
 
-                    LinkedIn:
+                    <strong>LinkedIn:</strong>
 
                     <a href="https://www.linkedin.com/in/ashish-mohite-695aa13a1"
-                       target="_blank">
+                        target="_blank">
 
                         LinkedIn Profile
 
@@ -995,12 +884,12 @@
             </div>
 
 
-            <!-- Replace YOUR_EMAIL with your email inside GitHub -->
+            <!-- PUT YOUR EMAIL HERE -->
 
             <div class="buttons">
 
                 <a class="btn"
-                   href="mailto:YOUR_EMAIL@example.com">
+                    href="mailto:ashumohite2107@gmail.com">
 
                     Email Me
 
@@ -1008,21 +897,18 @@
 
             </div>
 
-
         </div>
 
     </section>
 
 
-
-    <!-- ================= FOOTER ================= -->
+    <!-- FOOTER -->
 
     <footer>
 
         © 2026 Ashu | AI & Python Developer
 
     </footer>
-
 
 </body>
 
